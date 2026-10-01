@@ -70,7 +70,7 @@ export const PRIVACY_POLICY_HTML = `<!doctype html>
     <p>
       We collect information used to create and secure your account, including phone number and,
       depending on how you sign in, name, email address, profile picture, and identifiers from
-      Google, Facebook, Apple, or Firebase Authentication.
+      Google, Apple, or Firebase Authentication.
     </p>
 
     <h3>Profile and preferences</h3>
@@ -190,7 +190,7 @@ export const PRIVACY_POLICY_HTML = `<!doctype html>
           <td>Order, product, token, amount, status</td>
         </tr>
         <tr>
-          <td>Google, Facebook, or Apple</td>
+          <td>Google or Apple</td>
           <td>Social sign-in (when you choose it)</td>
           <td>Name, email, profile details, account ID</td>
         </tr>

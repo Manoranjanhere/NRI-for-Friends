@@ -186,8 +186,6 @@ export class AuthService {
     switch (dto.provider) {
       case SocialProvider.GOOGLE:
         return this.googleAuth(dto.idToken, clientIp);
-      case SocialProvider.FACEBOOK:
-        return this.facebookAuth(dto.idToken, clientIp);
       case SocialProvider.APPLE:
         return this.appleAuth(dto.idToken, clientIp);
       default:
@@ -246,57 +244,6 @@ export class AuthService {
       affectedDataName: 'Email',
       fromValue: null,
       toValue: email || googleId,
-      notes: clientIp ? `IP: ${clientIp}` : null,
-    });
-
-    return { accessToken: this.generateToken(user), isNewUser, user };
-  }
-
-  private async facebookAuth(accessToken: string, clientIp?: string | null) {
-    // Verify Facebook token by calling Graph API
-    const res = await fetch(
-      `https://graph.facebook.com/me?fields=id,name,email&access_token=${accessToken}`,
-    );
-    if (!res.ok) throw new UnauthorizedException('Invalid Facebook token');
-
-    const fbData: any = await res.json();
-    if (fbData.error) throw new UnauthorizedException('Invalid Facebook token');
-
-    const { id: facebookId, email, name } = fbData;
-
-    if (email) await this.checkBanned(BanType.EMAIL, email);
-
-    let user = await this.userRepository.findOne({
-      where: [{ facebookId }, ...(email ? [{ email }] : [])],
-    });
-    const isNewUser = !user;
-
-    if (!user) {
-      user = this.userRepository.create({ facebookId, email, name });
-      await this.userRepository.save(user);
-      await this.auditService.logAccount({
-        forUser: user.id,
-        byUser: user.id,
-        activityName: AccountActivityName.ACCOUNT_CREATED,
-        affectedDataName: 'AuthProvider',
-        fromValue: null,
-        toValue: 'facebook',
-        notes: clientIp ? `IP: ${clientIp}` : null,
-      });
-    } else if (!user.facebookId) {
-      user.facebookId = facebookId;
-      await this.userRepository.save(user);
-    }
-
-    this.assertUserNotBanned(user);
-
-    await this.auditService.logLogin({
-      forUser: user.id,
-      byUser: user.id,
-      activityName: LoginActivityName.LOGIN_FACEBOOK,
-      affectedDataName: 'Email',
-      fromValue: null,
-      toValue: email || facebookId,
       notes: clientIp ? `IP: ${clientIp}` : null,
     });
 

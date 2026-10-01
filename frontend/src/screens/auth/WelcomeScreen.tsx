@@ -12,7 +12,6 @@ import {
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
-import { LoginManager, AccessToken, Settings } from 'react-native-fbsdk-next';
 import appleAuth from '@invertase/react-native-apple-authentication';
 
 import { Colors, Spacing, FontSize, BorderRadius } from '../../theme';
@@ -109,22 +108,6 @@ export default function WelcomeScreen({ navigation }: Props) {
     }
   };
 
-  // ─── Facebook Sign In ─────────────────────────────────────────────────────
-  const handleFacebook = async () => {
-    try {
-      Settings.initializeSDK();
-      const result = await LoginManager.logInWithPermissions(['public_profile', 'email']);
-      if (result.isCancelled) return;
-      const data = await AccessToken.getCurrentAccessToken();
-      if (!data) return;
-      const res = await AuthService.socialAuth('facebook', data.accessToken);
-      await handleAuthSuccess(res);
-    } catch (err: any) {
-      console.error('[Facebook] Auth failed:', err.message);
-      Alert.alert('Facebook sign in failed', err?.response?.data?.message || err?.message || 'Please try again.');
-    }
-  };
-
   // ─── Apple Sign In ────────────────────────────────────────────────────────
   const handleApple = async () => {
     try {
@@ -191,16 +174,6 @@ export default function WelcomeScreen({ navigation }: Props) {
         >
           <Text style={styles.socialIcon}>G</Text>
           <Text style={styles.socialButtonText}>Continue with Google</Text>
-        </TouchableOpacity>
-
-        {/* Facebook */}
-        <TouchableOpacity
-          style={[styles.button, styles.socialButton]}
-          onPress={handleFacebook}
-          activeOpacity={0.85}
-        >
-          <Text style={[styles.socialIcon, { color: '#1877F2' }]}>f</Text>
-          <Text style={styles.socialButtonText}>Continue with Facebook</Text>
         </TouchableOpacity>
 
         {/* Apple (iOS only) */}

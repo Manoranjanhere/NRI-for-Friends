@@ -3,7 +3,6 @@ import { ApiProperty } from '@nestjs/swagger';
 
 export enum SocialProvider {
   GOOGLE = 'google',
-  FACEBOOK = 'facebook',
   APPLE = 'apple',
 }
 

@@ -1,7 +1,3 @@
 <resources>
     <string name="app_name">NRI Friends</string>
-    <string name="facebook_app_id">1780329869968324</string>
-    <!-- Replace CLIENT_TOKEN with value from Meta → Settings → Advanced → Client token -->
-    <string name="facebook_client_token">644ca5cab00c310118567b5d0d22b1df</string>
-    <string name="fb_login_protocol_scheme">fb1780329869968324</string>
 </resources>

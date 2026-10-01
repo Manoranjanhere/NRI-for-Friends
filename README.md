@@ -118,7 +118,7 @@ A **profile-completeness meter** on the Profile tab shows what to fill next.
 | Layer | Tech |
 |-------|------|
 | Mobile | React Native 0.79, TypeScript, React Navigation (native stack + bottom tabs), Zustand, MMKV, FastImage |
-| Auth | Firebase phone OTP, Google, Facebook, Apple |
+| Auth | Firebase phone OTP, Google, Apple |
 | Backend | NestJS 10, TypeORM, class-validator, Socket.IO, @nestjs/schedule |
 | Database | PostgreSQL 16 (Docker container on the EC2 host) |
 | Storage | AWS S3 (photos), AWS Rekognition (selfie verification) |
@@ -220,7 +220,7 @@ See `backend/.env.example` (local) and `backend/.env.production.example` (server
 | `DISABLE_PAID_FEATURES` | Yes | `true` locally, `false` in production |
 | `FIREBASE_SERVICE_ACCOUNT_JSON` | Yes | Or `FIREBASE_PROJECT_ID` + `FIREBASE_PRIVATE_KEY` + `FIREBASE_CLIENT_EMAIL` |
 | `GOOGLE_CLIENT_ID`, `GOOGLE_ANDROID_CLIENT_ID` | For Google login | |
-| `FACEBOOK_APP_ID`, `FACEBOOK_APP_SECRET`, `APPLE_CLIENT_ID` | For social login | |
+| `APPLE_CLIENT_ID` | For Apple login | |
 | `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, `AWS_S3_BUCKET` | Yes | Photos + selfie verification |
 | `GOOGLE_PLAY_PACKAGE_NAME`, `GOOGLE_PLAY_SERVICE_ACCOUNT_JSON` | Prod | `com.nrifriends.app` |
 | `GMAIL_USER`, `GMAIL_APP_PASSWORD` | Prod | Admin emails for new users / reports |

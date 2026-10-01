@@ -54,7 +54,7 @@ export class AuthController {
 
   @Post('social')
   @HttpCode(HttpStatus.OK)
-  @ApiOperation({ summary: 'Login/Register via Google, Facebook or Apple' })
+  @ApiOperation({ summary: 'Login/Register via Google or Apple' })
   @ApiResponse({ status: 200, description: 'JWT token returned' })
   socialAuth(@Body() dto: SocialAuthDto, @Req() req: Request) {
     return this.authService.socialAuth(dto, getClientIp(req));

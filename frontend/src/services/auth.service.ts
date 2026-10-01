@@ -29,7 +29,7 @@ const AuthService = {
 
   // ─── Social Auth ──────────────────────────────────────────────────────────
 
-  async socialAuth(provider: 'google' | 'facebook' | 'apple', idToken: string): Promise<AuthResponse> {
+  async socialAuth(provider: 'google' | 'apple', idToken: string): Promise<AuthResponse> {
     const { data } = await api.post<AuthResponse>('/auth/social', { provider, idToken });
     AuthService.saveSession(data);
     return data;
