@@ -1,0 +1,39 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="60" x2="920" y2="980" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFA24C"/>
+      <stop offset="0.5" stop-color="#FF6F00"/>
+      <stop offset="1" stop-color="#E65100"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(512 300) scale(520)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="globe">
+      <circle cx="512" cy="480" r="300"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1024" height="1024" rx="224" fill="url(#bg)"/>
+  <rect width="1024" height="1024" rx="224" fill="url(#glow)"/>
+
+  <!-- Globe -->
+  <circle cx="512" cy="480" r="300" fill="#FFFFFF" fill-opacity="0.14"/>
+  <g stroke="#FFFFFF" stroke-linecap="round" opacity="0.85">
+    <ellipse cx="512" cy="480" rx="130" ry="300" stroke-width="18"/>
+    <line x1="512" y1="180" x2="512" y2="780" stroke-width="18"/>
+    <line x1="212" y1="480" x2="812" y2="480" stroke-width="18"/>
+    <line x1="252" y1="330" x2="772" y2="330" stroke-width="14"/>
+  </g>
+
+  <!-- Two friends -->
+  <g clip-path="url(#globe)">
+    <circle cx="410" cy="560" r="76" fill="#FFFFFF"/>
+    <path d="M250 900 V800 C250 700 322 655 410 655 C498 655 570 700 570 800 V900 Z" fill="#FFFFFF"/>
+    <circle cx="616" cy="540" r="86" fill="#FFFFFF" stroke="#F36B00" stroke-width="22"/>
+    <path d="M436 920 V810 C436 700 520 650 616 650 C712 650 796 700 796 810 V920 Z" fill="#FFFFFF" stroke="#F36B00" stroke-width="22"/>
+  </g>
+  <circle cx="512" cy="480" r="300" stroke="#FFFFFF" stroke-width="30"/>
+
+  <text x="512" y="900" text-anchor="middle" fill="#FFFFFF" font-size="92" font-family="Poppins, Arial, sans-serif" font-weight="800" letter-spacing="2">NRI Friends</text>
+</svg>
