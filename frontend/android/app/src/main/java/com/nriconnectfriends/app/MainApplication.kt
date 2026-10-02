@@ -1,4 +1,4 @@
-package com.nrifriends.app
+package com.nriconnectfriends.app
 
 import android.app.Application
 import com.facebook.react.PackageList

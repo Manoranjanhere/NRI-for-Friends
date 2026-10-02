@@ -194,7 +194,7 @@ npm run android
 ```
 
 Set the API URL in `frontend/src/config/api.config.ts`. Put your Firebase config at
-`frontend/android/app/google-services.json` (registered for package **`com.nrifriends.app`**).
+`frontend/android/app/google-services.json` (registered for package **`com.nriconnectfriends.app`**).
 
 Type check: `npx tsc --noEmit`
 
@@ -222,7 +222,7 @@ See `backend/.env.example` (local) and `backend/.env.production.example` (server
 | `GOOGLE_CLIENT_ID`, `GOOGLE_ANDROID_CLIENT_ID` | For Google login | |
 | `APPLE_CLIENT_ID` | For Apple login | |
 | `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, `AWS_S3_BUCKET` | Yes | Photos + selfie verification |
-| `GOOGLE_PLAY_PACKAGE_NAME`, `GOOGLE_PLAY_SERVICE_ACCOUNT_JSON` | Prod | `com.nrifriends.app` |
+| `GOOGLE_PLAY_PACKAGE_NAME`, `GOOGLE_PLAY_SERVICE_ACCOUNT_JSON` | Prod | `com.nriconnectfriends.app` |
 | `GMAIL_USER`, `GMAIL_APP_PASSWORD` | Prod | Admin emails for new users / reports |
 
 ---
@@ -280,7 +280,7 @@ Schema changes are hand-written TypeORM migrations in `backend/src/migrations/`
 
 ## Before publishing
 
-1. Register **`com.nrifriends.app`** in Firebase (add your SHA-1/SHA-256), download the new
+1. Register **`com.nriconnectfriends.app`** in Firebase (add your SHA-1/SHA-256), download the new
    `google-services.json` and update the client IDs in `frontend/src/config/google.config.ts`.
 2. Create the Play Console app, the subscription `nrifriends_premium_1m` (₹300/month) and the
    coin products `nrifriends_coins_1`, `_5`, `_10`, `_25`, `_50`.

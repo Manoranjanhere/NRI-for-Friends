@@ -98,7 +98,7 @@ export function parsePlayCoinProductId(productId: string): string | null {
 }
 
 export function getPlayPackageName(): string {
-  return process.env.GOOGLE_PLAY_PACKAGE_NAME || 'com.nrifriends.app';
+  return process.env.GOOGLE_PLAY_PACKAGE_NAME || 'com.nriconnectfriends.app';
 }
 
 export function getPlayCatalog() {

@@ -1,4 +1,4 @@
-package com.nrifriends.app
+package com.nriconnectfriends.app
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
