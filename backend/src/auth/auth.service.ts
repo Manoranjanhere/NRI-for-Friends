@@ -48,7 +48,7 @@ export class AuthService {
     ].filter((id): id is string => Boolean(id?.trim()));
 
     const defaults = [
-      '588737081299-0pj2n5a92votvsnttck77hmj78pairml.apps.googleusercontent.com',
+      '887817604127-62iml2nfpdmcfl5b100riok8iepuo58l.apps.googleusercontent.com',
     ];
 
     return [...new Set([...fromEnv, ...defaults])];

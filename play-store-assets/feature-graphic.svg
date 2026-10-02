@@ -1,0 +1,71 @@
+<svg width="1024" height="500" viewBox="0 0 1024 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1024" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFA24C"/>
+      <stop offset="0.55" stop-color="#FF6F00"/>
+      <stop offset="1" stop-color="#E65100"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260 180) scale(520)">
+      <stop stop-color="#FFFFFF" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="1024" y2="1024" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFA24C"/>
+      <stop offset="0.5" stop-color="#FF6F00"/>
+      <stop offset="1" stop-color="#E65100"/>
+    </linearGradient>
+    <clipPath id="globe">
+      <circle cx="512" cy="480" r="300"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1024" height="500" fill="url(#bg)"/>
+  <rect width="1024" height="500" fill="url(#glow)"/>
+
+  <!-- Faint globe watermark on the right -->
+  <g opacity="0.12" stroke="#FFFFFF" stroke-linecap="round">
+    <circle cx="930" cy="420" r="260" stroke-width="16"/>
+    <ellipse cx="930" cy="420" rx="110" ry="260" stroke-width="12"/>
+    <line x1="670" y1="420" x2="1190" y2="420" stroke-width="12"/>
+    <line x1="700" y1="290" x2="1160" y2="290" stroke-width="10"/>
+  </g>
+
+  <!-- App icon tile -->
+  <g transform="translate(96 110)">
+    <rect x="6" y="14" width="280" height="280" rx="64" fill="#7A2E00" fill-opacity="0.25"/>
+    <g transform="scale(0.2734375)">
+      <rect width="1024" height="1024" rx="234" fill="url(#tile)"/>
+      <rect width="1024" height="1024" rx="234" fill="none" stroke="#FFFFFF" stroke-opacity="0.85" stroke-width="22"/>
+      <g transform="translate(512 512) scale(1.18) translate(-512 -480)">
+        <circle cx="512" cy="480" r="300" fill="#FFFFFF" fill-opacity="0.14"/>
+        <g stroke="#FFFFFF" stroke-linecap="round" opacity="0.85">
+          <ellipse cx="512" cy="480" rx="130" ry="300" stroke-width="18"/>
+          <line x1="512" y1="180" x2="512" y2="780" stroke-width="18"/>
+          <line x1="212" y1="480" x2="812" y2="480" stroke-width="18"/>
+          <line x1="252" y1="330" x2="772" y2="330" stroke-width="14"/>
+        </g>
+        <g clip-path="url(#globe)">
+          <circle cx="410" cy="560" r="76" fill="#FFFFFF"/>
+          <path d="M250 900 V800 C250 700 322 655 410 655 C498 655 570 700 570 800 V900 Z" fill="#FFFFFF"/>
+          <circle cx="616" cy="540" r="86" fill="#FFFFFF" stroke="#F36B00" stroke-width="22"/>
+          <path d="M436 920 V810 C436 700 520 650 616 650 C712 650 796 700 796 810 V920 Z" fill="#FFFFFF" stroke="#F36B00" stroke-width="22"/>
+        </g>
+        <circle cx="512" cy="480" r="300" stroke="#FFFFFF" stroke-width="30"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Text -->
+  <text x="430" y="228" fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" font-weight="800" font-size="86" letter-spacing="1">NRI Friends</text>
+  <text x="434" y="282" fill="#FFFFFF" fill-opacity="0.95" font-family="Segoe UI, Arial, sans-serif" font-weight="600" font-size="31">Find your people, wherever you are</text>
+
+  <!-- Feature pills -->
+  <g font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="22" fill="#FFFFFF">
+    <rect x="432" y="318" width="168" height="44" rx="22" fill="#FFFFFF" fill-opacity="0.22"/>
+    <text x="516" y="347" text-anchor="middle">NRIs nearby</text>
+    <rect x="612" y="318" width="190" height="44" rx="22" fill="#FFFFFF" fill-opacity="0.22"/>
+    <text x="707" y="347" text-anchor="middle">Same hometown</text>
+    <rect x="814" y="318" width="150" height="44" rx="22" fill="#FFFFFF" fill-opacity="0.22"/>
+    <text x="889" y="347" text-anchor="middle">Chat &amp; meet</text>
+  </g>
+</svg>
