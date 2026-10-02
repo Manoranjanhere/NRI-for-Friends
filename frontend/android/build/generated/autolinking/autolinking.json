@@ -184,30 +184,6 @@
         }
       }
     },
-    "react-native-fbsdk-next": {
-      "root": "D:\\Work\\NRI Friends\\frontend\\node_modules\\react-native-fbsdk-next",
-      "name": "react-native-fbsdk-next",
-      "platforms": {
-        "ios": {
-          "podspecPath": "D:\\Work\\NRI Friends\\frontend\\node_modules\\react-native-fbsdk-next\\react-native-fbsdk-next.podspec",
-          "version": "13.4.3",
-          "configurations": [],
-          "scriptPhases": []
-        },
-        "android": {
-          "sourceDir": "D:\\Work\\NRI Friends\\frontend\\node_modules\\react-native-fbsdk-next\\android",
-          "packageImportPath": "import com.facebook.reactnative.androidsdk.FBSDKPackage;",
-          "packageInstance": "new FBSDKPackage()",
-          "buildTypes": [],
-          "componentDescriptors": [],
-          "cmakeListsPath": "D:/Work/NRI Friends/frontend/node_modules/react-native-fbsdk-next/android/build/generated/source/codegen/jni/CMakeLists.txt",
-          "cxxModuleCMakeListsModuleName": null,
-          "cxxModuleCMakeListsPath": null,
-          "cxxModuleHeaderName": null,
-          "isPureCxxDependency": false
-        }
-      }
-    },
     "react-native-geolocation-service": {
       "root": "D:\\Work\\NRI Friends\\frontend\\node_modules\\react-native-geolocation-service",
       "name": "react-native-geolocation-service",
